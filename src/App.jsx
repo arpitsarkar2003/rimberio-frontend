@@ -16,6 +16,8 @@ import Footer from './component/Footer';
 import Register from './auth/Register';
 import Login from './auth/Login';
 
+import ScrollToTop from './common/ScrollToTop';
+
 
 function App() {
 
@@ -56,7 +58,7 @@ function App() {
 
   return (
     <>
-
+      <ScrollToTop />
       {loading && <Loading isDarkMode={isDarkMode}/>}
 
       
