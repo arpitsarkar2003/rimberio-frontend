@@ -20,9 +20,6 @@ const TopDoctors = () => {
                     key={index} className="border-[0.1px] group border-lime-300 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-400 hover:shadow-md group">
                         <img className="bg-lime-500 group-hover:bg-lime-700 transition-all duration-300" src={item.image} alt={item.name} />
                         <div className="pb-4 pt-3 px-4">
-                            <div className="flex items-center gap-2 text-sm text-center text-green-500">
-                                <p className="w-2 h-2 rounded-full bg-green-500"></p><p className="pt-1">Available</p>
-                            </div>
                             <p className="text-lg text-gray-900 font-bold group-hover:text-lime-800">{item.name}</p>
                             <p className="text-sm text-gray-600">{item.speciality}</p>
                         </div>

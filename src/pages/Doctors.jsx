@@ -5,6 +5,7 @@ import { specialityData } from '../common/assets';
 import { FaFilter } from 'react-icons/fa'; // React Icons for filter
 import Modal from 'react-modal'; // Import modal for mobile filters
 import { IoSearch } from 'react-icons/io5';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'; // Icons for ratings
 
 function Doctors() {
   const { speciality } = useParams();
@@ -22,7 +23,7 @@ function Doctors() {
       filtered = filtered.filter(item => item.speciality === speciality);
     }
     if (isAvailable) {
-      filtered = filtered.filter(item => item.isAvailable); // Assuming `isAvailable` is a property
+      filtered = filtered.filter(item => item.isAvailable === 'Available');
     }
     if (searchTerm) {
       filtered = filtered.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -159,9 +160,23 @@ function Doctors() {
                 alt={item.name}
               />
               <div className="pb-4 pt-3 px-4">
-                <div className="flex items-center gap-2 text-sm text-green-500">
-                  <p className="w-2 h-2 rounded-full bg-green-500"></p>
-                  <p>{item.isAvailable ? 'Available' : 'Not Available'}</p>
+                <div className="flex items-center gap-2 text-sm">
+                  {item.rating && (
+                    <div className="flex gap-1">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <span key={i}>
+                          {item.rating > i ? (
+                            <AiFillStar className="text-yellow-500" />
+                          ) : (
+                            <AiOutlineStar className="text-yellow-500" />
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <p className={`ml-auto ${item.isAvailable === 'Available' ? 'text-green-500' : 'text-red-500'}`}>
+                    {item.isAvailable === 'Available' ? 'Available' : 'Not Available'}
+                  </p>
                 </div>
                 <p className="text-lg text-gray-900 font-bold group-hover:text-lime-800">{item.name}</p>
                 <p className="text-sm text-gray-600">{item.speciality}</p>
