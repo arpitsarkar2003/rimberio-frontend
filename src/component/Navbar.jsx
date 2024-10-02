@@ -8,7 +8,7 @@ const NavItem = ({ to, children, onClick }) => (
       to={to} 
       className={({ isActive }) => 
         isActive 
-          ? 'group-hover:text-white transition-all duration-200 px-2 py-2 border-t border-lime-700 rounded-md ' 
+          ? 'group-hover:text-white transition-all duration-200 px-4 py-2 bg-lime-500 rounded-md ' 
           : 'text-gray-800 group-hover:text-white transition-all duration-200 px-2 py-1'
       }
       onClick={onClick}
@@ -45,22 +45,22 @@ const Navbar = ({ isDarkMode, isAuth, toggleAuth }) => {
                 <ul className="flex justify-between items-center space-x-5">
                     <Link to="/" className="flex justify-center items-center flex-col group"><li className="border border-transparent items-center justify-center w-full px-5 py-1 mb-4 text-md font-bold hover:border-green-300 hover:bg-lime-500 capitalize transform rounded-md  cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                     <NavItem to="/">Home</NavItem>
-                    </li><hr className="border-lime-700 hover:border-lime-700 w-[70%] group-hover:w-[90%]" /></Link>
+                    </li><hr className="border-lime-700 hover:border-lime-700 w-[20%] group-hover:w-[90%] transition-all duration-300" /></Link>
 
                     <Link to="/doctors" className="flex justify-center items-center flex-col group"><li className="border border-transparent items-center justify-center w-full px-5 py-1 mb-4 text-md font-bold hover:border-green-300 hover:bg-lime-500 leading-6 capitalize  transform rounded-md  cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                         <NavItem to="/doctors">Doctors</NavItem>
-                    </li><hr className="border-lime-700 hover:border-lime-700 w-[70%] group-hover:w-[90%]" /></Link>
+                    </li><hr className="border-lime-700 hover:border-lime-700 w-[20%] group-hover:w-[90%] transition-all duration-300" /></Link>
 
 
                     <Link to="/about" className="flex justify-center items-center flex-col group"><li className="border border-transparent items-center justify-center w-full px-5 py-1 mb-4 text-md font-bold hover:border-green-300 hover:bg-lime-500 leading-6 capitalize transform rounded-md  cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                        <NavItem to="/about"> about</NavItem>
 
-                    </li> <hr className="border-lime-700 hover:border-lime-700 w-[70%] group-hover:w-[90%]" /></Link>
+                    </li> <hr className="border-lime-700 hover:border-lime-700 w-[20%] group-hover:w-[90%] transition-all duration-300" /></Link>
 
 
                     <Link to="/contact" className="flex justify-center items-center flex-col group"><li className="border border-transparent items-center justify-center w-full px-5 py-1 mb-4 text-md font-bold hover:border-green-300 hover:bg-lime-500 leading-6 capitalize transform rounded-md  cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                         <NavItem to="/contact">contact</NavItem>
-                    </li><hr className="border-lime-700 hover:border-lime-700 w-[70%] group-hover:w-[90%]" /></Link>
+                    </li><hr className="border-lime-700 hover:border-lime-700 w-[20%] group-hover:w-[90%] transition-all duration-300" /></Link>
                 </ul>
             </div>
             <div className="relative">
@@ -74,7 +74,7 @@ const Navbar = ({ isDarkMode, isAuth, toggleAuth }) => {
                         onClick={() => {}}
                         className="flex items-center justify-center px-4 py-2 text-md font-bold bg-lime-500 rounded-sm  hover:-translate-y-1 transition-all duration-200"
                     >
-                        Login / Register
+                        Create A Remberio Acoount
                     </button>
                 )}
 

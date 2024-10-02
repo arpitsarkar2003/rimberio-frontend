@@ -4,7 +4,7 @@ import SpecialityMenu from './components/SpecialityMenu'
 import TopDoctors from './components/TopDoctors'
 import Banner from './components/Banner'
 
-function Home({isDarkMode}) {
+function Home() {
   return (
     <div>
         <div>
@@ -14,7 +14,7 @@ function Home({isDarkMode}) {
           <SpecialityMenu />
         </div>
         <div>
-          <TopDoctors/>
+          <TopDoctors docrows={8}/>
         </div>  
         <div>
           <Banner />
